@@ -137,4 +137,7 @@ nginx
 EOF
 chmod +x bin/start.sh
 
+echo "-----> Moving .htaccess"
+mv /app/config/public/.htaccess /app/public/.htaccess
+
 echo "-----> Done with compile"
