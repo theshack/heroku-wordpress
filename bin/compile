@@ -138,6 +138,6 @@ EOF
 chmod +x bin/start.sh
 
 echo "-----> Moving .htaccess"
-mv /app/config/public/.htaccess /app/public/.htaccess
+mv /app/config/public/.htaccess /app/public/
 
 echo "-----> Done with compile"
