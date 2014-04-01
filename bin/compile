@@ -137,7 +137,4 @@ nginx
 EOF
 chmod +x bin/start.sh
 
-echo "-----> Linking .htaccess"
-ln -s /app/config/public/.htaccess /app/public/.htaccess
-
 echo "-----> Done with compile"
