@@ -33,6 +33,10 @@ define("DB_HOST", trim($url["host"]));
 /** MySQL database port  */
 // define("DB_PORT", trim($url["port"]));
 
+/** Get AWS Keys from Heroku config */
+define("AWS_ACCESS_KEY_ID", getenv('AWS_ACCESS_KEY_ID'));
+define("AWS_SECRET_ACCESS_KEY", getenv('AWS_SECRET_ACCESS_KEY'));
+
 /** Database Charset to use in creating database tables. */
 define("DB_CHARSET", "utf8");
 
