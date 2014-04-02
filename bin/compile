@@ -108,9 +108,6 @@ cp /app/vendor/php/apc.php /app/public/apc.php
 erb /app/vendor/nginx/conf/wordpress.conf.erb > /app/vendor/nginx/conf/wordpress.conf
 chmod 755 /app/public/wp-content
 
-cp /app/config/public/.htaccess /app/public/.htaccess
-chmod 644 /app/public/.htaccess
-
 # Expose Heroku config vars to PHP-FPM processes
 for var in \`env | cut -f1 -d=\`; do
   echo "env[\$var] = \\$\${var}" >> /app/vendor/php/etc/php-fpm.conf
