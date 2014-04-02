@@ -94,7 +94,8 @@ else
 fi
 
 echo "-----> Linking .htaccess"
-ln -s /app/config/public/.htaccess /app/public/.htaccess
+cd /app/public
+ln -s /app/config/public/.htaccess .htaccess
 
 echo "-----> Writing start.sh script"
 mkdir -p ${BUILD_DIR}/bin
