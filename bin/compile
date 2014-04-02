@@ -94,7 +94,7 @@ else
 fi
 
 echo "-----> Linking .htaccess"
-cd /app/public
+cd ~/public
 ln -s /app/config/public/.htaccess .htaccess
 
 echo "-----> Writing start.sh script"
