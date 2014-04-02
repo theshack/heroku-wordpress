@@ -93,6 +93,9 @@ else
   WORDPRESS_INSTALLATION_DIR="public"
 fi
 
+echo "-----> Linking .htaccess"
+ln -s /app/config/public/.htaccess /app/public/.htaccess
+
 echo "-----> Writing start.sh script"
 mkdir -p ${BUILD_DIR}/bin
 cd ${BUILD_DIR}
