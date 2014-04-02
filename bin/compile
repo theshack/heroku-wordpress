@@ -93,10 +93,6 @@ else
   WORDPRESS_INSTALLATION_DIR="public"
 fi
 
-echo "-----> Linking .htaccess"
-cd ~/public
-ln -s /app/config/public/.htaccess .htaccess
-
 echo "-----> Writing start.sh script"
 mkdir -p ${BUILD_DIR}/bin
 cd ${BUILD_DIR}
@@ -111,6 +107,9 @@ cp /app/vendor/php/php/fpm/status.html /app/public/status.html
 cp /app/vendor/php/apc.php /app/public/apc.php
 erb /app/vendor/nginx/conf/wordpress.conf.erb > /app/vendor/nginx/conf/wordpress.conf
 chmod 755 /app/public/wp-content
+
+cp /app/config/public/.htaccess /app/public/.htaccess
+chmod 644 /app/public/.htaccess
 
 # Expose Heroku config vars to PHP-FPM processes
 for var in \`env | cut -f1 -d=\`; do
