@@ -135,9 +135,6 @@ setup.sh
 php-fpm
 nginx
 
-cp /app/config/public/.htaccess /app/public/.htaccess
-chmod 644 /app/public/.htaccess
-
 EOF
 chmod +x bin/start.sh
 
