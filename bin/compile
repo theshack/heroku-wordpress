@@ -135,6 +135,12 @@ setup.sh
 php-fpm
 nginx
 
+rm -rf /app/public/wp-content/themes/twentyfourteen
+rm -rf /app/public/wp-content/themes/twentythirteen
+rm -rf /app/public/wp-content/themes/twentytwelve
+rm -rf /app/public/wp-content/plugins/hello.php
+rm -rf /app/public/wp-content/plugins/askimet
+
 EOF
 chmod +x bin/start.sh
 
